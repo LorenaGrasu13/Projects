@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disney Characters</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="home/home.css">
+    <link rel="stylesheet" href="films/films.css">
+    <link rel="stylesheet" href="characters/characters.css">
+    <script src="https://kit.fontawesome.com/43b2d146a6.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/
+jquery.min.js"></script>
+    <script src="page.js"></script>
+    <script src="characters/characters.js"></script>
+    <script src="films/films.js"></script>
+</head>
+<body>
+    <header> 
+        <img id="logo" src="images/Walt_Disney_Pictures-Logo.png" alt="logo"/> 
+        <h2>Disney Characters</h2>
+        <div>
+            <nav class="navigationBar">
+                <ul class="navigationList">
+                    <li>
+                        <section>
+                            <img src="images/home.png"/>
+                            <a href="" id="linkHome" onclick="loadSection('homePage')">Home</a>
+                        </section>
+                    </li>
+                    <li>
+                        <section>
+                            <img src="images/char.jpg"/>
+                            <a href="" id="linkChar" onclick="loadSection('characters')">Characters</a>
+                        </section>
+                    </li>
+                    <li>
+                        <section>
+                            <img src="images/films.jpg"/>
+                            <a href="" id="linkFilm" onclick="loadSection('films')">Films</a>
+                        </section>
+                    </li>
+                    <li>
+                        <section>
+                            <img src="images/fav.png"/>
+                            <a href="" id="linkFav" onclick="loadSection('favourites')">Favourites</a>
+                        </section>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="homePage" class="hidden">
+            <h1 id="welcomeMsg">Welcome to the homepage!</h1>
+            <p id="message">Please press on the title of the option that you want</p>
+        </section>
+        <section id="ch">
+            <h3>Characters</h3>
+            <button id="loadChar">Load characters</button>
+            <div id="characterList">
+
+            </div>
+        </section>
+        <section id="film">
+            <h3>Films</h3>
+            <input type="text" placeholder="Insert the name of the character" id="charInput"><br>
+            <button id="loadFilms">Load films</button>
+            <div id="filmList">
+
+            </div>
+        </section>
+        <section id="fav" class="hidden">
+            <h1>Welcome to the fav!</h1>
+            <div id="favList">
+                
+            </div>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,92 @@
+#ch {
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#loadChar {
+    background-color: #5fabfc;
+    color: white;
+    padding: 10px 20px;
+    border: 2px solid #007bff;
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: 0 5px #999;
+}
+
+#loadChar:hover {
+    transition: 0.3s;
+}
+
+#loadChar:active {
+    background-color: #72b5fd;
+    box-shadow: 0 4px #666;
+    transform: translateY(4px);
+}
+
+#characterList {
+    margin-top: 50px;
+    list-style-type: none;
+    padding:0;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 10px;
+    justify-content: center;
+}
+
+.characterCard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 2px solid #007bff;
+    border-radius: 20px 20px 20px 20px;
+    height: 200px;
+    width: 150px;
+    position: relative;
+}
+
+.characterCard img {
+    border-radius: 0px 0px 20px 20px;
+    width: 100%;
+    height: 70%;
+}
+
+#tableHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:row;
+    width: 100%;
+    height: 30%;
+}
+
+#tableHeader p{
+    align-items: start;
+}
+
+#tableHeader i{
+    align-items: end;
+}
+
+#favMark {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    color: black;
+    font-size: 1em;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+#favMark.favorite {
+    color: gold;
+    font-size: 1em;
+}
+
+#favMark.favorite::before {
+    content: "\f005"; /* Font Awesome solid star code */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900; /* Makes the star appear filled */
+}
